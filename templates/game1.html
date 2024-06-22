@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Game 1 - My Flask App{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/game1.js') }}" defer></script>
+{% endblock %}
+
+{% block content %}
+<h1>Running T-Rex Game</h1>
+<div id="game-container">
+    <div id="dino"></div>
+    <div id="cactus"></div>
+</div>
+{% endblock %}
