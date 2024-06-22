@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    margin-left: 1em;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+}
+
+.nav-link:hover, .nav-link:focus {
+    background-color: #45a049;
+    border-radius: 5px;
+}
+
+.dropdown-toggle::after {
+    content: ' ▼';
+    font-size: 0.8em;
+    margin-left: 0.3em;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: black;
+    min-width: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-item {
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #f1f1f1;
+}
+
+.nav-item:hover .dropdown-menu, .nav-item:focus-within .dropdown-menu {
+    display: block;
+}
+
+main {
+    flex: 1;
+    padding: 2em;
+    background-color: white;
+    margin: 1em auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.game-tile {
+    width: 200px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.game-tile:hover {
+    transform: scale(1.05);
+}
+
+.game-tile img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#game-container {
+    position: relative;
+    width: 600px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#dino {
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #000;
+}
+
+#cactus {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 40px;
+    background-color: #555;
+    right: 0;
+}
+
+.game-over {
+    text-align: center;
+    font-size: 2em;
+    color: red;
+}
